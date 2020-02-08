@@ -1,0 +1,11 @@
+Tutorial Information
+---------------------
+
+* npm i g crate-react-app   -> for install
+* For creating react new app
+    1. npx create-react-app my-app
+    2. cd my-app
+    3. npm start
+
+* npm start  -> for start node server
+* https://wireframe.cc/
