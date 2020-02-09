@@ -5,8 +5,10 @@ class first extends Component{
     render(){
         return (
             <div>
-                <h3>My name is Rakibul Islam</h3>
-                <p>This is my first react app.</p>
+                <h3>Name: {this.props.name}</h3>
+                <p>Email: {this.props.email}</p>
+                <p>Address: {this.props.address}</p>
+                <hr></hr>
             </div>
         )
     }
