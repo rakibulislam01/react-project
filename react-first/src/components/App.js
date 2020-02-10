@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import Example from "./Example_state_less/example";
 
 // import First from './First/first'
 // import Counter from "./Counter/counter";
@@ -60,6 +61,8 @@ class App extends Component {
                     click me
                 </button>
                 {this.state.name ? <p>Hello Mr. {this.state.name}</p> : ''}
+
+                <Example name='Md. Rakibul Islam'/>
             </div>
         );
     }
