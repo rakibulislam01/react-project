@@ -1,18 +1,46 @@
 import React, { Component } from 'react';
 import './App.css';
+import Books from "./Books/Books";
+
 
 class App extends Component {
+    state = {
+         books: [
+             {
+                 name: 'Javascripte',
+                 price: 20,
+                 id: 1
+             },
+             {
+                 name: 'React',
+                 price: 30,
+                 id: 2
+             },
+             {
+                 name: 'Redux',
+                 price: 33,
+                 id: 3
+             },
+             {
+                 name: 'React Native',
+                 price: 24,
+                 id: 4
+             }
+
+         ]
+    };
+
+    deleteHandler = (id) => {
+        let newBooks = this.state.books.filter(book => book.id !== id)
+        this.setState({
+            books: newBooks
+        })
+    };
 
     render() {
-        let obj = {
-            padding: '30px',
-            fontFamily: 'Arial',
-            fontSize: '30px'
-        };
-
         return (
             <div className="App">
-                <h1 style={obj}>Hello Programmer</h1>
+                <Books deleteHandler={this.deleteHandler.bind(this)} books={this.state.books}/>
             </div>
         );
     }
